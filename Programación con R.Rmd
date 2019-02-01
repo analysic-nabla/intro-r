@@ -1,0 +1,79 @@
+---
+title: "Introducción a la \n programación con R"
+author: "Analysic Nabla"
+output: html_document
+---
+
+
+```{r, out,echo=FALSE}
+htmltools::img(src = knitr::image_uri("img/logo_analysic_nabla_png.png"), 
+               alt = 'logo', 
+               height="400px",
+               width="200px",
+               style = 'position:absolute; top:0; right:0; padding:0px;')
+```
+
+
+
+
+# 1. Introducción
+
+El objetivo de este curso es permitir que el estudiante se familiarizarse con los concéptos básicos del lenguaje de programación R de tal manera que pueda utilizarlo cotidianamente en su vida laboral.
+
+Es por esto que este curso tiene un énfasis en el manejo y limpieza de datos, matería prima de cualquier análisis. Además se cubren aspectos de probabilidad y estadística para los que esta optimizado el lenguaje, estos van desde la estimación de parámetros, resumen de información y visualización de datos.
+
+## Aspectos introductorios
+
+1. En R el símbolo de gato (#) se utiliza para escribir comentarios. cualquier texto que se escriba después de este símbolo no será renderizado.
+2. En este lenguaje existe un símbolo llamado "símbolo de asignación" que nos permite asignar valores a variables. este símbolo de utiliza de la siguiente manera: `a <- 5`. 
+En el ejemplo le estamos asignando a la variable "a" el valor 5. Podemos utilizar el símbolo de igual para el mismo propósito: `a = 5`. Durante el resto de la clase procuraremos utilizar el símbolo de igual, ya que es un etándar en distintos lenguajes de programación.
+3. Para mostrar cuál es el valor que guarda una variable se utiliza la función print().
+```{r}
+a = 5
+print(a)
+```
+4. Para definir variables de texto se escribe el texto dentro de comillas (es indistinto si son dobles o únicas).
+
+```{r}
+print("Soy un caractér")
+print('Soy otro caractér')
+```
+
+
+
+## Clases en R
+
+Prácticamente todos los elementos con los que trabajaremos en R provienen de una clase. Estas clases definen cuál debe ser la interacción de un elemento de una clase con elementos de distintas o la misma clase.
+Para saber cuál es la clase de un determinado elemento podemos utilizar la función class().
+
+
+```{r pressure, echo=TRUE}
+class(5) # Este es un eleménto de clase numérica
+
+class('Hello world') # Este es un ejemplo de un character
+
+```
+
+#### Clase Numérica
+La primera gran aplicación de este lenguaje, es el de una calculadora (ciertamente poderosa).
+Podemos hacer todo tipo de cálculos numéricos. Por lo tanto, nosotros sabemos que para cualesquiera dos elementos de clase numérica podemos aplicar un conjunto de operadores como suma, resta, división, elevar a una potencia, etc.
+
+```{r}
+# Calculamos el  logaritmo de un número y lo multiplicamos por otro número, todo esto al cuadrado
+( log(9874) *  5.25 ) ^ 2
+```
+
+**Ejercicios**  
+realiza las siguientes operacinoes en R:  
+
+1. $$4 * 6 \div 2 ^ 3 = $$  
+2. $$5 * 8 - \frac{8^3}{1 + 8^2} =$$
+3. Obtén ambas soluciones para:
+$$x =  \frac{-(-5) \pm \sqrt{(-5)^2 -4(2)(-3)}}{2(2)}$$
+
+```{r}
+ktable((data.frame(1:10)))
+```
+
+
+
